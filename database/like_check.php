@@ -15,13 +15,13 @@ if ($stmt->rowCount() == 0) {
 	    ":user_id" => $_POST["user_id"]
 	));
 	if($result){
-		echo ("List item saved");
+		echo ("Your choice is saved");
 	}
 	else{
-		echo ("Failed to save listitems");
+		echo ("Could not save choice");
 	}
 } else {
-	echo ("Failed already exists");
+	echo ("You have already liked an image");
 }
 
 
