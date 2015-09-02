@@ -17,8 +17,8 @@ foreach ($result as $key => $ig_array) {
 			echo "</pre>";
 			//Get values from instagram
 			$id = $value->id;
-			$userid = $value->user->id;
-			$img_link = $value->images->standard_resolution->url;
+			$username = $value->user->username;
+			$img_link = $value->images->low_resolution->url;
 
 			//Check if instagram element already is saved
 			$stmt = $conn->prepare("SELECT * FROM ig WHERE instagram_id = :instagram_id");
@@ -27,10 +27,10 @@ foreach ($result as $key => $ig_array) {
 			));
 			if ($stmt->rowCount() == 0) {
 				//Save into database
-				$stmt = $conn->prepare("INSERT INTO ig (instagram_id, user_id, img_link) VALUES (:instagram_id, :user_id, :img_link);");
+				$stmt = $conn->prepare("INSERT INTO ig (instagram_id, username, img_link) VALUES (:instagram_id, :username, :img_link);");
 				$result = $stmt->execute(array(
 					":instagram_id" => $id,
-				    ":user_id" => $userid,
+				    ":username" => $username,
 				    ":img_link" => $img_link
 				));
 				if(result){

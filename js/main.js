@@ -1,14 +1,14 @@
 $(document).ready(function(){
 	saveInstagramElement();
 	printInstagram();
-	
+	syncLikes();
 });
 	
 function saveInstagramElement(){
 	// POST Ajax: Save instagram element
 	$.ajax({
 		url: 'database/addPhotos.php',
-		type: 'GET',
+		type: 'POST',
 		success: function(data) {
 			//called when successful
 			console.log("data saved");
@@ -33,19 +33,47 @@ $(".likeButton").click(function(e){
 	var $fb_id = $("#fb_id").attr("value");
 	var confirmChoice = confirm("Is this your choice?");
 	if (confirmChoice == true) {
-	    alert("Thank you for your participation");
+	    
 	    $.ajax({
 			url: 'database/like_check.php',
 			type: 'POST',
 			data: { user_id : $fb_id, ig_id : $ig_id},
 			success: function(data) {
-				//called when successful
-				console.log(data);
+				alert(data);
+				syncLikes();
 			},
 			error: function() {
-				alert("Du har redan gillat ett inlägg")
+				alert("Error: like not saved");
 			}
 		});
 	}
 	
 });
+
+function syncLikes(){
+
+	$('.like').each(function() {
+		//instagram id
+		var $id = $(this).attr("id");
+		var $ig_id = $id.substring(6, $id.length);
+		
+		$.ajax({
+			url: 'database/like_sync.php',
+			type: 'POST',
+			data: { ig_id : $ig_id },
+			success: function(data) {
+				$("#likes-"+$ig_id).html(data);
+				if($("#likes-"+$ig_id).html() != "0"){
+					$("#heart-"+$ig_id).attr("src", "img/heart.png");
+				}
+				else if($("#likes-"+$ig_id).html() == "0"){
+					$("#heart-"+$ig_id).attr("src", "img/heart_grey.png");
+				}
+				console.log(data);
+			},
+			error: function(data) {
+				console.log(data);
+			}
+		});
+	});
+}
