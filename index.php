@@ -89,14 +89,11 @@ if ( isset($session)) {
 					$title = $value["username"];
 					$link = $value["img_link"];
 					echo "<div class='imgBox'>";
-<<<<<<< HEAD
-					echo "<img src='$link' style='height: 200px;'/>";
-					echo "<div class='likeBox'><img src='img/heart.png' alt='heart'/><span id='likes-".$key."'></span></div>";
-=======
+
 					echo "<span id='title-".$key."'>$title</span>";
 					echo "<img src='$link' style='height: 500px;'/>";
 					echo "<div class='likeBox'><img id='heart-".$key."' src='img/heart_grey.png' alt='heart'/><span id='likes-".$key."' class='like'></span></div>";
->>>>>>> origin/master
+
 					echo "<button class='likeButton' id='button-".$key."'>rösta</button>";
 					echo "</div>";
 
