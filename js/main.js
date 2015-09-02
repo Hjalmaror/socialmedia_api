@@ -39,8 +39,8 @@ $(".likeButton").click(function(e){
 			type: 'POST',
 			data: { user_id : $fb_id, ig_id : $ig_id},
 			success: function(data) {
+				alert(data);
 				syncLikes();
-				alert(data)
 			},
 			error: function() {
 				alert("Error: like not saved");
@@ -62,11 +62,13 @@ function syncLikes(){
 			type: 'POST',
 			data: { ig_id : $ig_id },
 			success: function(data) {
-				if(data != "0"){
+				$("#likes-"+$ig_id).html(data);
+				if($("#likes-"+$ig_id).html() != "0"){
 					$("#heart-"+$ig_id).attr("src", "img/heart.png");
 				}
-				$("#likes-"+$ig_id).html(data);
-				
+				else if($("#likes-"+$ig_id).html() == "0"){
+					$("#heart-"+$ig_id).attr("src", "img/heart_grey.png");
+				}
 				console.log(data);
 			},
 			error: function(data) {
