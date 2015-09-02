@@ -1,0 +1,36 @@
+ body {
+
+}
+
+.content{
+   background-image: url("img/background.jpg");
+   width: 300px;
+   height: auto;
+}
+
+table{
+   
+   
+}
+
+#imgTable{
+   width: 100px;
+    
+}
+
+.imgBox{
+   display: inline-block;
+   height: 200px;
+   width:200px;
+}
+
+.likeBox{
+
+   
+}
+
+tr{
+   width:auto;
+   height:auto;
+   
+}

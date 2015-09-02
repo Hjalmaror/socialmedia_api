@@ -75,19 +75,28 @@ if ( isset($session)) {
 		<title>Nacka Forum Showcase</title>
 		<meta charset="utf-8">
 		<meta name="author" content="Henrik Nilsson">
+		<link rel="stylesheet" type="text/css" href="style.css" />
 	</head>
 	<body>
+	    <div id='content'>
 		<?php include "database/getPhotos.php"; ?>
 		<?php $facebookID = $graphObject["id"]; ?>
 		<input id="fb_id" type="hidden" value="<?php echo $facebookID; ?>"/>
-		<table id='imgTable'>
-			<tr>
+		<!--<table id='imgTable'>-->
+			<!--<tr>-->
 			<?php
 				foreach ($rows as $key => $value) {
+					$title = $value["username"];
 					$link = $value["img_link"];
 					echo "<div class='imgBox'>";
-					echo "<img src='$link' style='height: 500px;'/>";
+<<<<<<< HEAD
+					echo "<img src='$link' style='height: 200px;'/>";
 					echo "<div class='likeBox'><img src='img/heart.png' alt='heart'/><span id='likes-".$key."'></span></div>";
+=======
+					echo "<span id='title-".$key."'>$title</span>";
+					echo "<img src='$link' style='height: 500px;'/>";
+					echo "<div class='likeBox'><img id='heart-".$key."' src='img/heart_grey.png' alt='heart'/><span id='likes-".$key."' class='like'></span></div>";
+>>>>>>> origin/master
 					echo "<button class='likeButton' id='button-".$key."'>rösta</button>";
 					echo "</div>";
 
@@ -96,8 +105,9 @@ if ( isset($session)) {
 					}
 				}
 			?>
-			</tr>
-		</table>
+			<!--</tr>-->
+		<!--</table>-->
+	    </div>
 	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 	<script src="js/main.js"></script>
 	</body>
