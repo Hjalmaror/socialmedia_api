@@ -20,17 +20,31 @@ table{
 
 .imgBox{
    display: inline-block;
-   height: 200px;
-   width:200px;
+   height: 400px;
+   width:300px;
 }
-
+h3{
+	padding-left: 25px;
+}
+.ig_img{
+	width: 250px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
 .likeBox{
-
-   
+	width: 125px;
+	height: 25px;
+	padding-left: 25px;
+	display: block;
+	float: left;
 }
-
-tr{
-   width:auto;
-   height:auto;
-   
+.votebox{
+	width: 125px;
+	height: 25px;
+	padding-right: 25px;
+	display: block;
+	float: right;
+}
+button{
+	width: 125px;
 }
