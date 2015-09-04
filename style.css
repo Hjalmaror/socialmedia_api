@@ -1,4 +1,17 @@
  body {
+ 	font-family: 'Istok Web', sans-serif;
+
+ 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#581068+0,912ba7+50,581068+100 */
+	background: #581068; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzU4MTA2OCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzkxMmJhNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1ODEwNjgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(left,  #581068 0%, #912ba7 50%, #581068 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#581068), color-stop(50%,#912ba7), color-stop(100%,#581068)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #581068 0%,#912ba7 50%,#581068 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #581068 0%,#912ba7 50%,#581068 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #581068 0%,#912ba7 50%,#581068 100%); /* IE10+ */
+	background: linear-gradient(to right,  #581068 0%,#912ba7 50%,#581068 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#581068', endColorstr='#581068',GradientType=1 ); /* IE6-8 */
 
 }
 
@@ -20,31 +33,37 @@ table{
 
 .imgBox{
    display: inline-block;
-   height: 400px;
-   width:300px;
+
+   width:400px;
+   margin: 20px;
+   outline: 1px solid #570f67;
+   background-color: white;
+
 }
 h3{
 	padding-left: 25px;
 }
 .ig_img{
-	width: 250px;
-	padding-left: 25px;
-	padding-right: 25px;
+	width: 380px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
 }
 .likeBox{
-	width: 125px;
+	width: 200px;
 	height: 25px;
-	padding-left: 25px;
+	padding-left: 50px;
 	display: block;
 	float: left;
+	margin-bottom: 25px;
+}
+.like{
+	font-size: 1.4em;
+	margin-left: 10px;
 }
 .votebox{
-	width: 125px;
+	width: 100px;
 	height: 25px;
-	padding-right: 25px;
-	display: block;
+	padding-right: 50px;
 	float: right;
-}
-button{
-	width: 125px;
 }

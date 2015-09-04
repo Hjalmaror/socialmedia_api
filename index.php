@@ -76,6 +76,7 @@ if ( isset($session)) {
 		<meta charset="utf-8">
 		<meta name="author" content="Henrik Nilsson">
 		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link href='https://fonts.googleapis.com/css?family=Istok+Web:400,700' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 	    <div id='content'>
@@ -94,7 +95,7 @@ if ( isset($session)) {
 						echo "<img class='ig_img' src='$link'/>";
 						echo "<div class='likeBox'><img id='heart-".$id."' src='img/heart_grey.png' alt='heart'/><span id='likes-".$id."' class='like'></span></div>";
 
-						echo "<div class='voteBox'><button class='likeButton' id='button-".$id."'>rösta</button></div>";
+						echo "<div class='voteBox'><button class='likeButton' id='button-".$id."'>RÖSTA</button></div>";
 					echo "</div>";
 				}
 			?>
