@@ -92,7 +92,7 @@ if ( isset($session)) {
 					$id = $value["id"];
 					echo "<div class='imgBox'>";
 						echo "<h3 id='title-".$id."'>$title</h3>";
-						echo "<img class='ig_img' src='$link'/>";
+						echo "<a href='$link' class='image-link'><img class='ig_img' src='$link'/></a>";
 						echo "<div class='likeBox'><img id='heart-".$id."' src='img/heart_grey.png' alt='heart'/><span id='likes-".$id."' class='like'></span></div>";
 
 						echo "<div class='voteBox'><button class='likeButton' id='button-".$id."'>RÖSTA</button></div>";
@@ -105,6 +105,8 @@ if ( isset($session)) {
 	    </div>
 	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/popup.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/popup.css" />
 	</body>
 </html>
 <?php
