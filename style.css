@@ -15,11 +15,6 @@
 
 }
 
-.content{
-   background-image: url("img/background.jpg");
-   width: 300px;
-   height: auto;
-}
 
 table{
    
@@ -33,8 +28,7 @@ table{
 
 .imgBox{
    display: inline-block;
-
-
+   width: 400px;
    margin: 20px;
    outline: 1px solid #570f67;
    background-color: white;
@@ -44,13 +38,14 @@ h3{
 	padding-left: 25px;
 }
 .ig_img{
-
+	width: 380px;
+	margin: 10px;
 	padding-bottom: 10px;
 }
 .likeBox{
 
 	height: 25px;
-
+	margin-left: 50px;
 	display: block;
 	float: left;
 	margin-bottom: 25px;
@@ -59,9 +54,9 @@ h3{
 	font-size: 1.4em;
 	margin-left: 10px;
 }
-.votebox{
-
+.voteBox{
+	width: 100px;
 	height: 25px;
-
+	margin-right: 50px;
 	float: right;
 }
