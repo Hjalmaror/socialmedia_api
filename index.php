@@ -94,7 +94,14 @@ if ( isset($session)) {
 						echo "<img class='ig_img' src='$link'/>";
 						echo "<div class='likeBox'><img id='heart-".$id."' src='img/heart_grey.png' alt='heart'/><span id='likes-".$id."' class='like'></span></div>";
 
+<<<<<<< Updated upstream
 						echo "<div class='voteBox'><button class='likeButton' id='button-".$id."'>rösta</button></div>";
+=======
+					echo "<span id='title-".$key."'>$title</span>";
+					echo "<img src='$link' style='height: 500px;'/>";
+					echo "<div class='likeBox'><img id='heart-".$key."' src='img/heart_grey.png' alt='heart'/><span id='likes-".$key."' class='like'></span></div>";
+					echo "<button class='likeButton' id='button-".$key."'>rösta</button>";
+>>>>>>> Stashed changes
 					echo "</div>";
 				}
 			?>
