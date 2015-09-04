@@ -77,3 +77,36 @@ function syncLikes(){
 		});
 	});
 }
+
+$(".ig_img").click(function(){
+	if ($( this ).hasClass("popped")) {
+		$( this ).animate({
+			width: "380px",
+			height: "380px"
+		}, "fast", function(){
+
+			$( this ).parent().animate({
+				width: "400px"
+			}, 500, function(){
+				$('html, body').animate({ scrollTop: $( this ).offset().top }, 'slow');
+				$( this ).find( ".ig_img" ).removeClass("popped");
+			});
+		});
+	}
+	else{
+		$( this ).parent().animate({
+			width: "95%",
+			height: "100%"
+		}, "fast", function(){
+			$('html, body').animate({ scrollTop: $( this ).find( ".ig_img" ).offset().top }, 'slow');
+			$( this ).find( ".ig_img" ).animate({
+				width: "650px",
+				height: "650px"
+			}, 500, function(){
+				$( this ).addClass("popped");
+			});
+			
+		});
+	}
+	
+});
